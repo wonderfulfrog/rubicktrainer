@@ -37,6 +37,30 @@ If you wish to help contribute to the development of Rubick Trainer, here is a q
 
 A special thanks to all of our contributors!
 
-- [Devin Lumley](https://github.com/devinwl)
-- [Anthony Grimaldi](https://bitbucket.org/minewf)
 - [Ray Harris](https://github.com/raymondgh)
+
+## License
+
+```
+    Rubick Trainer quiz game
+    Copyright (C) 2014, 2015 Devin Lumley
+    Copyright (C) 2014 Anthony Grimaldi
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+```
+
+## Legal
+
+Rubick, Dota 2, and associated assets of Dota 2 are properties of Valve Corporation.

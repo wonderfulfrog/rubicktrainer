@@ -325,7 +325,8 @@ body {
     color: #ae3e3e;
 }
 
-.updates a {
+.updates a,
+.gameOver a {
     color: #1a87f9;
 }
 
