@@ -4,9 +4,6 @@ images/dota2/*/*.jpg
 images/dota2/*/*.jpeg
 images/dota2/*/*.gif
 
-# Ignore JSON data (this should be generated)
-data/heroes.json
-
 # Ignore system files
 Thumbs.db
 .DS_Store
