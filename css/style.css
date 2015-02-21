@@ -1,0 +1,397 @@
+body {
+    background: #252627;
+    color: #9b9b9b;
+    font-family: "Georgia";
+}
+
+.loading {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.help_screen {
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.help_screen .box {
+    width: 300px;
+    min-height: 140px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 15%;
+    background: #252627;
+    border: 2px solid #1f2223;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.help_screen .confirm {
+    width: 105px;
+    height: 25px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: #1f2223;
+    border-radius: 5px;
+    padding: 5px;
+    line-height: 25px;
+    font-size: 0.8em;
+    border: 1px solid #9b9b9b;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.dotaquiz {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.header {
+    font-size: 2.4em;
+    font-variant: small-caps;
+    text-align: center;
+    color: #ae3e3e;
+}
+
+.header img {
+    vertical-align: middle;
+}
+
+.scoreBox {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.inactive {
+    opacity: 0.4;
+}
+
+.score, .guesses, .streak {
+    float: left;
+}
+
+.score {
+}
+
+.guesses {
+}
+
+.streak {
+}
+
+.score_value, .guesses_value, .streak_value {
+    color: #ae3e3e;
+    font-family: "Arial";
+}
+
+.question {
+    background: #1f2223;
+    padding: 10px;
+    font-size: 1.2em;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.property {
+    color: #1a87f9;
+}
+
+.heroName {
+    color: #ae3e3e;
+}
+
+.abilityName {
+    color: #2bab01;
+}
+
+.level {
+    color: #fff;
+}
+
+.ability {
+    background: #1f2223;
+    position: relative;
+    padding: 20px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.abilityBox {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.ability .icon {
+    float: left;
+}
+
+.ability .icon img {
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+}
+
+.ability .info {
+    margin-left: 148px;
+}
+
+.ability .info .name {
+    color: #ae3e3e;
+    padding-bottom: 10px;
+    font-size: 1.6em;
+    text-transform: uppercase;
+}
+
+.ability .info .description {
+    font-size: 1.2em;
+}
+
+.ability .info .cooldown {
+    width: 50%;
+    float: left;
+    background: url('http://wonderfulfailure.com/dotapanion/resources/images/icon_cd.png') no-repeat;
+    background-size: 16px 16px;
+    padding-left: 20px;
+}
+
+.ability .info .mana {
+    background: url('http://wonderfulfailure.com/dotapanion/resources/images/icon_mana.png') no-repeat;
+    background-size: 16px 16px;
+    padding-left: 20px;
+    float: left;
+    width: 40%;
+}
+
+.ability .info .cooldown, .ability .info .mana {
+    font-size: 0.9em;
+    font-family: "Arial";
+}
+
+.ability .info .cooldown em, .ability .info .mana em {
+    color: #fff;
+    font-style: normal;
+}
+
+.ability .info .cooldown img, .ability .info .mana img {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.choices {
+    margin-top: 20px;
+}
+
+.choices ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.choices ul li {
+    width: 23%;
+    float: left;
+    text-align: center;
+    height: 64px;
+    background: #1f2223;
+    border-bottom: 2px solid #ae3e3e;
+    margin-left: 1%;
+    margin-right: 1%;
+    line-height: 64px;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: "Arial";
+    font-size: 1.6em;
+}
+
+.choices ul li:hover {
+    box-shadow: 0 0 10px #9b9b9b;
+}
+
+.heroes {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.heroes li {
+    float: left;
+}
+
+.hero {
+    width: 200px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hero .image img {
+    width: 100%;
+}
+
+.hero:hover {
+    box-shadow: 0 0 10px #9b9b9b;
+}
+
+.incorrect {
+    opacity: 0.3;
+}
+
+.incorrect:hover {
+    box-shadow: none;
+    cursor: default;
+}
+
+.hilight {
+    box-shadow: 0 0 10px #2bab01;
+    opacity: 1.0;
+}
+
+
+.hero .name {
+    background: #1f2223;
+    padding: 5px;
+    text-align: center;
+    font-size: 1.0em;
+    color: #ae3e3e;
+    text-transform: uppercase;
+}
+
+.gameOver {
+    background: #1f2223;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.0em;
+    margin-top: 20px;
+}
+
+.gameOver .gameOverText {
+    font-size: 1.4em;
+}
+
+.gameOver .highestStreakValue, .gameOver .finalScoreValue {
+    color: #ae3e3e;
+    font-family: "Arial";
+    font-weight: bold;
+}
+
+.gameOver .newGame {
+    width: 75px;
+    height: 25px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: #1f2223;
+    border-radius: 5px;
+    padding: 5px;
+    line-height: 25px;
+    font-size: 0.8em;
+    border: 1px solid #9b9b9b;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.updates {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.updates strong {
+    color: #ae3e3e;
+}
+
+.updates a {
+    color: #1a87f9;
+}
+
+@media screen and (max-width: 320px) and (max-device-width: 320px) {
+    body {
+        margin: 0;
+    }
+
+    .help_screen .box {
+        width: 100%;
+        padding: 0px;
+        padding-top: 10px;
+        border: none;
+        box-shadow: none;
+    }
+
+    .header {
+        font-size: 1.6em;
+    }
+
+    .dotaquiz {
+        width: 320px;
+    }
+
+    .scoreBox {
+        margin-top: 10px;
+        font-size: 1.0em;
+    }
+
+    .question {
+        margin-top: 10px;
+    }
+
+    .ability {
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .ability .icon {
+        width: 18%;
+    }
+
+    .ability .icon img {
+        width: 100%;
+    }
+
+    .ability .info {
+        margin-left: 22%;
+    }
+
+    .ability .info .name {
+        font-size: 1.2em;
+    }
+
+    .ability .info .description {
+        font-size: 0.8em;
+    }
+
+    .choices {
+        margin-top: 10px;
+    }
+
+    .choices ul li {
+        width: 23%;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-bottom: 10px;
+    }
+}

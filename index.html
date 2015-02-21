@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>Rubick Trainer</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.min.js"></script>
+    <script src="js/default.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+<div class="updates"><strong>news</strong> - updated to 6.83 <a href="http://www.reddit.com/message/compose/?to=Biroshak">bug reports</a></div>
+<div class="help_screen">
+    <div class="box">
+        Push yourself to the limit and answer these intense questions about hero skills!  GL HF!
+        <div class="loading">
+            Loading… 
+        </div>
+        <div class="confirm" style="display: none;">BRING IT ON</div>
+    </div>
+</div>
+<div class="dotaquiz" style="display: none;">
+    <div class="header">
+        <img src="/rubicktrainer/images/dota2/miniheroes/rubick.png" /> Rubick Trainer
+    </div>
+    <div class="gameOver" style="display: none;">
+        <span class="gameOverText">Game over</span><br />
+        Final Score: <span class="finalScoreValue"></span> points<br />
+        Highest Streak: <span class="highestStreakValue"></span> in a row
+        <div class="newGame">New Game</div>
+    </div>
+    <div class="scoreBox">
+        <span class="score_value">0</span> points &bull; 
+        <span class="guesses_value">3</span> guesses left &bull; 
+        <span class="streak_value">0</span> in a row
+    </div>
+    <div class="question">What's the <span class="property"></span> on <span class="heroName"></span> <span class="level">level <span class="levelVal">x</span></span> <span class="abilityName"></span>?</div>
+    <div class="ability">
+        <div class="abilityBox">
+            <div class="icon"></div>
+            <div class="info">
+                <div class="name">
+                </div>
+                <div class="description">
+                </div>
+                <div class="cooldown" style="display: none;">
+                    <em>1</em> / <em>2</em> / <em>3</em> / <em>4</em>
+                </div>
+                <div class="mana" style="display: none;">
+                    <em>1</em> / <em>2</em> / <em>3</em> / <em>4</em>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="choices">
+        <ul>
+            <li class="choice">1</li>
+            <li class="choice">2</li>
+            <li class="choice">3</li>
+            <li class="choice">4</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
