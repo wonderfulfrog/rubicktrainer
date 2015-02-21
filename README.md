@@ -31,6 +31,8 @@ If you wish to help contribute to the development of Rubick Trainer, here is a q
 4. Push your changes (`git push origin my-great-feature`)
 5. [Create a new pull request on GitHub](https://github.com/devinwl/rubicktrainer/compare) with your branch
 
+*Note*: When dealing with updates to game data, please try to avoid updating `heroes.json` directly.  Use [dota2-json](https://github.com/devinwl/dota2-json) to generate the `json` file automatically.
+
 ## Special Thanks
 
 A special thanks to all of our contributors!
