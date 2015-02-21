@@ -24,6 +24,7 @@ Please [create an issue on GitHub](https://github.com/devinwl/rubicktrainer/issu
 ## Contributing
 
 If you wish to help contribute to the development of Rubick Trainer, here is a quick guide on how to do so:
+
 1. Fork the repo
 2. Create your feature branch (`git checkout -b my-great-feature`)
 3. Commit your changes to your feature branch
@@ -34,6 +35,6 @@ If you wish to help contribute to the development of Rubick Trainer, here is a q
 
 A special thanks to all of our contributors!
 
-[Devin Lumley](https://github.com/devinwl)
-[Anthony Grimaldi](https://bitbucket.org/minewf)
-[Ray Harris](https://github.com/raymondgh)
+- [Devin Lumley](https://github.com/devinwl)
+- [Anthony Grimaldi](https://bitbucket.org/minewf)
+- [Ray Harris](https://github.com/raymondgh)
