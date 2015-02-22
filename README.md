@@ -5,7 +5,7 @@ Rubick Trainer is a quiz for Dota 2 that tests your knowledge of hero abilities!
 ## Requirements 
 [dota2-json](https://github.com/devinwl/dota2-json)
 
-## Installation
+## Setup
 
 1. Populate the `images/dota2` directory with the Dota 2 assets.  You will need the following folders:
 	* `heroes`
@@ -42,23 +42,23 @@ A special thanks to all of our contributors!
 ## License
 
 ```
-    Rubick Trainer quiz game
-    Copyright (C) 2014, 2015 Devin Lumley
-    Copyright (C) 2014 Anthony Grimaldi
+Rubick Trainer quiz game
+Copyright (C) 2014, 2015 Devin Lumley
+Copyright (C) 2014 Anthony Grimaldi
 
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
-    (at your option) any later version.
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License along
-    with this program; if not, write to the Free Software Foundation, Inc.,
-    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ```
 
 ## Legal

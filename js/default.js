@@ -586,7 +586,7 @@ function nearest(n, v) {
         Game.updateQuestion = function() {
             $(".ability .icon").html('<img src="'+imageURIForAbility(this.problem.question)+'">');
             $(".ability .info .name").html(this.problem.question.name);
-            $(".ability .info .description").html(this.problem.question.description.replace(/\n/g, '<br />'));
+            $(".ability .info .description").html(this.problem.question.description.replace( /\\n/g, "<br />" ));
 
             $(".question .property").html(this.problem.property.name);
             $(".question .heroName").html(this.problem.question.abilityOwner.toUpperCase() + "\'S");
