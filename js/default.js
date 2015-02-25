@@ -120,6 +120,9 @@ function loadHeroData() {
 			var heroes = heroJSON;
 			for(var hero_key in heroes) {
 
+                // Skip unavailable heroes
+                if(heroes[hero_key].active == '0') continue;
+
 				var hero = {
 					name: heroes[hero_key].name,
 					internalName: hero_key,

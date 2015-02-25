@@ -2,10 +2,13 @@
 
 Rubick Trainer is a quiz for Dota 2 that tests your knowledge of hero abilities!
 
-## Requirements 
-[dota2-json](https://github.com/devinwl/dota2-json)
+## Installation
 
-## Setup
+### Requirements 
+- [dota2-json](https://github.com/devinwl/dota2-json)
+- Dota 2 image assets
+
+### Setup
 
 1. Populate the `images/dota2` directory with the Dota 2 assets.  You will need the following folders:
 	* `heroes`
@@ -31,7 +34,7 @@ If you wish to help contribute to the development of Rubick Trainer, here is a q
 4. Push your changes (`git push origin my-great-feature`)
 5. [Create a new pull request on GitHub](https://github.com/devinwl/rubicktrainer/compare) with your branch
 
-*Note*: When dealing with updates to game data, please try to avoid updating `heroes.json` directly.  Use [dota2-json](https://github.com/devinwl/dota2-json) to generate the `json` file automatically.
+*Note*: When dealing with updates to game data, please try to avoid editing `heroes.json` directly.  Use [dota2-json](https://github.com/devinwl/dota2-json) to generate the `json` file automatically.
 
 ## Special Thanks
 
