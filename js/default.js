@@ -227,7 +227,7 @@ function easeQuestion() {
 
 function hideHeroes() {
     $('.choice').each( function() {
-        $(this).hide();
+        $(this).stop(true, true).hide();
     });
 }
 
@@ -663,17 +663,20 @@ function nearest(n, v) {
 
         // selectReponse: string => void
         Game.selectResponse = function(userSelection, element) {
-            if (userSelection == this.problem.answer) {
-                // Player chose correctly
-                var pointsEarned = BASE_SCORE_BONUS + Math.round( BASE_SCORE_BONUS * this.streak * STREAK_BONUS );
-                this.addToScore(pointsEarned);
-                this.extendStreak();
-                this.nextRound();
-            } else {
-                // Player chose incorrectly
-                $(element).addClass('incorrect');
-                this.removeAttempt();
-                this.endStreak();
+            // Wait until choice has stopped animating before being selectable
+            if(!$('.choices ul li').is(':animated')) {
+                if (userSelection == this.problem.answer) {
+                    // Player chose correctly
+                    var pointsEarned = BASE_SCORE_BONUS + Math.round( BASE_SCORE_BONUS * this.streak * STREAK_BONUS );
+                    this.addToScore(pointsEarned);
+                    this.extendStreak();
+                    this.nextRound();
+                } else {
+                    // Player chose incorrectly
+                    $(element).addClass('incorrect');
+                    this.removeAttempt();
+                    this.endStreak();
+                }
             }
         }
 
