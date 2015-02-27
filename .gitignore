@@ -7,6 +7,3 @@ images/dota2/*/*.gif
 # Ignore system files
 Thumbs.db
 .DS_Store
-
-# Ignore .lock files
-Gemfile.lock
