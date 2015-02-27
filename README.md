@@ -5,13 +5,18 @@ Rubick Trainer is a quiz for Dota 2 that tests your knowledge of hero abilities!
 ## Installation
 
 ### Requirements
-- [dota2-json](https://github.com/devinwl/dota2-json)
+- [Bundler](http://bundler.io/)
+- [dota2-json](https://github.com/devinwl/dota2-json) (if rebuilding `heroes.json`)
 
 ### Setup
 
+1. Run `bundle install` to install the necessary gems.
+2. Run `bundle exec rackup` to start the Rack server.
+3. View the site at [http://localhost:9292](http://localhost:9292).
+
+### Optional Setup
+
 1. Generate a fresh version of `heroes.json`.  Follow the documentation provided on the [dota2-json](https://github.com/devinwl/dota2-json) page.
-2. View `index.html`.
-	* Note: Viewing the `index.html` page via the `file:///` protocol will trigger security errors in most modern browsers.
 
 ## Reporting bugs / feature requests / feedback
 
