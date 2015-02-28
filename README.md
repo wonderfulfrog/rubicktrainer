@@ -1,24 +1,24 @@
 # Rubick Trainer
 
+[![Build Status](https://travis-ci.org/devinwl/rubicktrainer.svg?branch=master)](https://travis-ci.org/devinwl/rubicktrainer)
+
 Rubick Trainer is a quiz for Dota 2 that tests your knowledge of hero abilities!
 
 ## Installation
 
-### Requirements 
-- [dota2-json](https://github.com/devinwl/dota2-json)
-- Dota 2 image assets
+### Requirements
+- [Bundler](http://bundler.io/)
+- [dota2-json](https://github.com/devinwl/dota2-json) (if rebuilding `heroes.json`)
 
 ### Setup
 
-1. Populate the `images/dota2` directory with the Dota 2 assets.  You will need the following folders:
-	* `heroes`
-	* `miniheroes`
-	* `spellicons`
+1. Run `bundle install` to install the necessary gems.
+2. Run `bundle exec rackup` to start the Rack server.
+3. View the site at [http://localhost:9292](http://localhost:9292).
 
-	These assets are found inside the `vpk` files from your Dota 2 installation.  Detailed instructions for retrieving these files are provided in the `images/dota2` [README](https://github.com/devinwl/rubicktrainer/tree/master/images/dota2).
-2. Generate a fresh version of `heroes.json`.  Follow the documentation provided on the [dota2-json](https://github.com/devinwl/dota2-json) page.
-3. View `index.html`.
-	* Note: Viewing the `index.html` page via the `file:///` protocol will trigger security errors in most modern browsers.
+### Optional Setup
+
+1. Generate a fresh version of `heroes.json`.  Follow the documentation provided on the [dota2-json](https://github.com/devinwl/dota2-json) page.
 
 ## Reporting bugs / feature requests / feedback
 

@@ -199,21 +199,14 @@ function loadHeroData() {
  * Capitalizes the first letter of a given string
  */
 function capitalize(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1); 
-}
-
-/**
- * Returns a proper URI for hero images
- */
-function imageURIForHero(hero) {
-    return '/rubicktrainer/images/dota2/heroes/' + hero.internalName + '.png';
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 /**
  * Returns a proper URI for ability images
  */
 function imageURIForAbility(ability) {
-    return '/rubicktrainer/images/dota2/spellicons/' + ability.internalName + '.png';
+    return 'http://cdn.dota2.com/apps/dota2/images/abilities/' + ability.internalName + '_lg.png';
 }
 
 function hideQuestion() {
@@ -529,7 +522,7 @@ function nearest(n, v) {
             invalidateChoices();
 
             var answer = this.problem.answer;
-            
+
             $('.choice').each( function() {
                 if($(this).html() == answer)
                     $(this).addClass('hilight');
