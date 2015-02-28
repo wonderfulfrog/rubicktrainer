@@ -1,5 +1,7 @@
 # Rubick Trainer
 
+[![Build Status](https://travis-ci.org/devinwl/rubicktrainer.svg?branch=master)](https://travis-ci.org/devinwl/rubicktrainer)
+
 Rubick Trainer is a quiz for Dota 2 that tests your knowledge of hero abilities!
 
 ## Installation
