@@ -3,6 +3,22 @@ body {
     color: #9b9b9b;
 }
 
+/*
+body:after {
+    background-image: url();
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.2;
+    background-size: cover;
+    background-position: center;
+}
+*/
+
 a,
 a:hover {
     color: #7ed535;
@@ -148,6 +164,7 @@ a:hover {
 
 .choices {
     margin-top: 20px;
+    overflow: hidden;
 }
 
 .choices .choice {
@@ -219,14 +236,32 @@ a:hover {
 }
 
 @media screen and (max-width: 767px) and (max-device-width: 767px) {
-    .choices .choice:nth-child(-n+2) {
-        margin-bottom: 30px;
+    .navbar {
+        margin-bottom: 15px;
+    }
+
+    .question,
+    .ability,
+    .choices {
+        margin-top: 15px;
+    }
+
+    .ability .icon img {
+        max-width: 96px;
+    }
+
+    .ability .info {
+        margin-left: 116px;
     }
 }
 
 @media screen and (max-width: 460px) and (max-device-width: 460px) {
     body {
         font-size: 12px;
+    }
+
+    .ability {
+        padding: 10px;
     }
 
     .ability .info .name {
@@ -240,17 +275,5 @@ a:hover {
 
     .ability .info {
         margin-left: 68px;
-    }
-
-    .choices > div:nth-child(2n+1) {
-        padding-right: 5px;
-    }
-
-    .choices > div:nth-child(n+1) {
-        padding-left: 5px;
-    }
-
-    .choices .choice:nth-child(-n+2) {
-        margin-bottom: 10px;
     }
 }
