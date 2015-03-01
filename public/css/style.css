@@ -69,13 +69,13 @@ a:hover {
 }
 
 .help_screen .confirm {
-    width: 105px;
+    width: 120px;
     margin: 0 auto;
     margin-top: 20px;
     background: #1f2223;
     border-radius: 5px;
     padding: 10px;
-    font-size: 0.8em;
+    font-size: 0.9em;
     border: 1px solid #9b9b9b;
     cursor: pointer;
     -moz-user-select: none;
@@ -218,7 +218,7 @@ a:hover {
 }
 
 .gameOver .newGame {
-    width: 75px;
+    width: 95px;
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -226,7 +226,7 @@ a:hover {
     border-radius: 5px;
     padding: 5px;
     line-height: 25px;
-    font-size: 0.8em;
+    font-size: 1em;
     border: 1px solid #9b9b9b;
     cursor: pointer;
     -moz-user-select: none;
