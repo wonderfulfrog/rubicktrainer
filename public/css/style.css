@@ -1,7 +1,27 @@
 body {
-    background: #252627;
+    background-color: #252627;
     color: #9b9b9b;
-    font-family: "Georgia";
+}
+
+a,
+a:hover {
+    color: #7ed535;
+}
+
+.navbar {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.navbar .navbar-brand {
+    font-family: 'Oswald';
+    font-size: 1.8em;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.navbar .navbar-brand .green {
+    color: #7ed535;
 }
 
 .loading {
@@ -34,13 +54,11 @@ body {
 
 .help_screen .confirm {
     width: 105px;
-    height: 25px;
     margin: 0 auto;
     margin-top: 20px;
     background: #1f2223;
     border-radius: 5px;
-    padding: 5px;
-    line-height: 25px;
+    padding: 10px;
     font-size: 0.8em;
     border: 1px solid #9b9b9b;
     cursor: pointer;
@@ -50,49 +68,13 @@ body {
     user-select: none;
 }
 
-.dotaquiz {
-    width: 640px;
-    margin: 0 auto;
-}
-
-.header {
-    font-size: 2.4em;
-    font-variant: small-caps;
-    text-align: center;
-    color: #ae3e3e;
-}
-
-.header img {
-    vertical-align: middle;
-}
-
 .scoreBox {
-    width: 100%;
-    margin-top: 20px;
     text-align: center;
     font-size: 1.2em;
 }
 
-.inactive {
-    opacity: 0.4;
-}
-
-.score, .guesses, .streak {
-    float: left;
-}
-
-.score {
-}
-
-.guesses {
-}
-
-.streak {
-}
-
 .score_value, .guesses_value, .streak_value {
-    color: #ae3e3e;
-    font-family: "Arial";
+    color: #ffffff;
 }
 
 .question {
@@ -112,11 +94,18 @@ body {
 }
 
 .abilityName {
-    color: #2bab01;
+    color: #7ed535;
 }
 
 .level {
     color: #fff;
+}
+
+.property,
+.heroName,
+.abilityName,
+.level {
+    font-weight: 700;
 }
 
 .ability {
@@ -145,161 +134,77 @@ body {
 }
 
 .ability .info .name {
-    color: #ae3e3e;
+    color: #7ed535;
     padding-bottom: 10px;
     font-size: 1.6em;
     text-transform: uppercase;
+    line-height: 1;
 }
 
 .ability .info .description {
     font-size: 1.2em;
-}
-
-.ability .info .cooldown {
-    width: 50%;
-    float: left;
-    background: url('http://wonderfulfailure.com/dotapanion/resources/images/icon_cd.png') no-repeat;
-    background-size: 16px 16px;
-    padding-left: 20px;
-}
-
-.ability .info .mana {
-    background: url('http://wonderfulfailure.com/dotapanion/resources/images/icon_mana.png') no-repeat;
-    background-size: 16px 16px;
-    padding-left: 20px;
-    float: left;
-    width: 40%;
-}
-
-.ability .info .cooldown, .ability .info .mana {
-    font-size: 0.9em;
-    font-family: "Arial";
-}
-
-.ability .info .cooldown em, .ability .info .mana em {
-    color: #fff;
-    font-style: normal;
-}
-
-.ability .info .cooldown img, .ability .info .mana img {
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
+    line-height: 1.2;
 }
 
 .choices {
     margin-top: 20px;
 }
 
-.choices ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-.choices ul li {
-    width: 23%;
-    float: left;
+.choices .choice {
+    display: block;
     text-align: center;
     height: 64px;
     background: #1f2223;
-    border-bottom: 2px solid #ae3e3e;
-    margin-left: 1%;
-    margin-right: 1%;
+    color: #ffffff;
+    border-bottom: 2px solid #7ed535;
     line-height: 64px;
-    cursor: pointer;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    font-family: "Arial";
     font-size: 1.6em;
 }
 
-.choices ul li:hover {
-    box-shadow: 0 0 10px #9b9b9b;
+.choices .choice:hover,
+.choices .choice:focus {
+    text-decoration: none;
 }
 
-.heroes {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    padding-left: 10px;
-    padding-top: 10px;
+.choices .choice:hover {
+    background-color: #272a2b;
 }
 
-.heroes li {
-    float: left;
+.choices .choice.incorrect {
+    opacity: 0.4;
 }
 
-.hero {
-    width: 200px;
-    cursor: pointer;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.hero .image img {
-    width: 100%;
-}
-
-.hero:hover {
-    box-shadow: 0 0 10px #9b9b9b;
-}
-
-.incorrect {
-    opacity: 0.3;
-}
-
-.incorrect:hover {
-    box-shadow: none;
-    cursor: default;
-}
-
-.hilight {
-    box-shadow: 0 0 10px #2bab01;
-    opacity: 1.0;
-}
-
-
-.hero .name {
-    background: #1f2223;
-    padding: 5px;
-    text-align: center;
-    font-size: 1.0em;
-    color: #ae3e3e;
-    text-transform: uppercase;
+.choices .choice.incorrect:hover {
+    background-color: #1f2223;
 }
 
 .gameOver {
     background: #1f2223;
-    padding: 10px;
     text-align: center;
     font-size: 1.0em;
-    margin-top: 20px;
+    overflow: hidden;
 }
 
 .gameOver .gameOverText {
     font-size: 1.4em;
+    color: #7ed535;
+    margin-top: 10px;
+    display: block;
 }
 
 .gameOver .highestStreakValue, .gameOver .finalScoreValue {
-    color: #ae3e3e;
-    font-family: "Arial";
-    font-weight: bold;
+    color: #ffffff;
 }
 
 .gameOver .newGame {
     width: 75px;
-    height: 25px;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     background: #1f2223;
     border-radius: 5px;
     padding: 5px;
@@ -313,86 +218,39 @@ body {
     user-select: none;
 }
 
-.updates {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: 5px;
-    font-size: 12px;
+@media screen and (max-width: 767px) and (max-device-width: 767px) {
+    .choices .choice:nth-child(-n+2) {
+        margin-bottom: 30px;
+    }
 }
 
-.updates strong {
-    color: #ae3e3e;
-}
-
-.updates a,
-.gameOver a {
-    color: #1a87f9;
-}
-
-@media screen and (max-width: 320px) and (max-device-width: 320px) {
+@media screen and (max-width: 460px) and (max-device-width: 460px) {
     body {
-        margin: 0;
-    }
-
-    .help_screen .box {
-        width: 100%;
-        padding: 0px;
-        padding-top: 10px;
-        border: none;
-        box-shadow: none;
-    }
-
-    .header {
-        font-size: 1.6em;
-    }
-
-    .dotaquiz {
-        width: 320px;
-    }
-
-    .scoreBox {
-        margin-top: 10px;
-        font-size: 1.0em;
-    }
-
-    .question {
-        margin-top: 10px;
-    }
-
-    .ability {
-        padding: 10px;
-        margin-top: 10px;
-    }
-
-    .ability .icon {
-        width: 18%;
-    }
-
-    .ability .icon img {
-        width: 100%;
-    }
-
-    .ability .info {
-        margin-left: 22%;
+        font-size: 12px;
     }
 
     .ability .info .name {
-        font-size: 1.2em;
+        padding-bottom: 0;
+        font-size: 1.3em;
     }
 
-    .ability .info .description {
-        font-size: 0.8em;
+    .ability .icon img {
+        max-width: 48px;
     }
 
-    .choices {
-        margin-top: 10px;
+    .ability .info {
+        margin-left: 68px;
     }
 
-    .choices ul li {
-        width: 23%;
-        margin-left: 1%;
-        margin-right: 1%;
+    .choices > div:nth-child(2n+1) {
+        padding-right: 5px;
+    }
+
+    .choices > div:nth-child(n+1) {
+        padding-left: 5px;
+    }
+
+    .choices .choice:nth-child(-n+2) {
         margin-bottom: 10px;
     }
 }

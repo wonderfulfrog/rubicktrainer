@@ -4,9 +4,13 @@
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
         <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
         <script src="//code.jquery.com/ui/1.10.1/jquery-ui.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <script src="js/default.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -14,11 +18,41 @@
         <meta property="og:title" content="Rubick Trainer" />
         <meta property="og:type" content="website" />
         <meta property="og:description" content="Rubick Trainer is a quiz for Dota 2 that tests your knowledge of hero abilities!" />
-        <meta property="og:image" content="http://wonderfulfailure.com/dotaquiz/hard/images/preview.png" />
-        <meta property="og:url" content="http://wonderfulfailure.com/dotaquiz/hard" />
+        <meta property="og:image" content="./images/preview.png" />
+        <meta property="og:url" content="http://rubicktrainer.wonderfulfailure.com" />
     </head>
     <body>
-        <div class="updates"><strong>6.83c</strong> - <a href="https://github.com/devinwl/rubicktrainer/issues">report a bug</a> - <a href="https://github.com/devinwl/rubicktrainer">view source</a></div>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#"><span class="green">Rubick</span> Trainer</a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="https://github.com/devinwl/rubicktrainer/issues/new" target="_blank">Report a bug</a></li>
+                        <li><a href="https://github.com/devinwl/rubicktrainer#contributing" target="_blank">Contribute</a></li>
+                        <!--
+                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="active-lang">English</span> <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Español</a></li>
+                            <li><a href="#">Francais</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Help Translate</a></li>
+                        </ul>
+                        </li>
+                        -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
         <div class="help_screen">
             <div class="box">
                 Push yourself to the limit and answer these intense questions about hero skills!  GL HF!
@@ -28,41 +62,57 @@
                 <div class="confirm" style="display: none;">BRING IT ON</div>
             </div>
         </div>
-        <div class="dotaquiz" style="display: none;">
-            <div class="header">
-                Rubick Trainer
-            </div>
-            <div class="gameOver" style="display: none;">
-                <span class="gameOverText">Game over</span><br />
-                Final Score: <span class="finalScoreValue"></span> points<br />
-                Highest Streak: <span class="highestStreakValue"></span> in a row
-                <p>Anything wrong?  <a href="https://github.com/devinwl/rubicktrainer/issues">Report a bug</a>!</p>
-                <div class="newGame">New Game</div>
-            </div>
-            <div class="scoreBox">
-                <span class="score_value">0</span> points &bull;
-                <span class="guesses_value">3</span> guesses left &bull;
-                <span class="streak_value">0</span> in a row
-            </div>
-            <div class="question">What's the <span class="property"></span> on <span class="heroName"></span> <span class="level">level <span class="levelVal">x</span></span> <span class="abilityName"></span>?</div>
-            <div class="ability">
-                <div class="abilityBox">
-                    <div class="icon"></div>
-                    <div class="info">
-                        <div class="name">
-                        </div>
-                        <div class="description">
+
+        <div class="container">
+            <div class="dotaquiz" style="display: none;">
+
+                <div class="gameOverContainer" style="display: none;">
+                    <div class="gameOver" style="display: none;">
+                        <span class="gameOverText">Game over</span>
+                        Final Score: <span class="finalScoreValue"></span> points<br />
+                        Highest Streak: <span class="highestStreakValue"></span> in a row
+                        <div class="newGame">New Game</div>
+                        <p>Anything wrong?  <a href="https://github.com/devinwl/rubicktrainer/issues">Report a bug</a>!</p>
+                    </div>
+                </div>
+
+                <div class="scoreBox">
+                    <span class="score_value">0</span> points &bull;
+                    <span class="guesses_value">7</span> guesses left &bull;
+                    <span class="streak_value">0</span> in a row
+                </div>
+
+                <div class="question">
+                    <span id="question_text_1">What's the</span> <span class="property"></span> <span id="question_text_2">of</span> <span class="heroName"></span> <span class="level"><span id="level">level</span> <span class="levelVal">x</span></span> <span class="abilityName"></span>?
+                </div>
+
+                <div class="ability">
+                    <div class="abilityBox">
+                        <div class="icon"></div>
+                        <div class="info">
+                            <div class="name"></div>
+                            <div class="description"></div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="choices">
-                <ul>
-                    <li class="choice">1</li>
-                    <li class="choice">2</li>
-                    <li class="choice">3</li>
-                    <li class="choice">4</li>
-                </ul>
+
+                <div class="row">
+                    <div class="choices">
+                        <div class="col-xs-6 col-sm-3">
+                            <a href="#" class="choice">1</a>
+                        </div>
+                        <div class="col-xs-6 col-sm-3">
+                            <a href="#" class="choice">2</a>
+                        </div>
+                        <div class="col-xs-6 col-sm-3">
+                            <a href="#" class="choice">3</a>
+                        </div>
+                        <div class="col-xs-6 col-sm-3">
+                            <a href="#" class="choice">4</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </body>

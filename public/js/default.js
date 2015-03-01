@@ -245,20 +245,20 @@ function easeHeroes() {
 }
 
 function flashScore() {
-    $(".score_value").stop().animate({ color: "#2bab01"}, 50).animate({ color: "#ae3e3e"}, 1750);
+    $(".score_value").stop().animate({ color: "#2bab01"}, 50).animate({ color: "#ffffff"}, 1750);
 }
 
 function flashStreak() {
-    $(".streak_value").stop().animate({ color: "#2bab01"}, 50).animate({ color: "#ae3e3e"}, 1750);
+    $(".streak_value").stop().animate({ color: "#2bab01"}, 50).animate({ color: "#ffffff"}, 1750);
 }
 
 function flashEndStreak() {
-    $(".streak_value").stop().animate({ color: "#aa0000"}, 50).animate({ color: "#ae3e3e"}, 1750);
+    $(".streak_value").stop().animate({ color: "#aa0000"}, 50).animate({ color: "#ffffff"}, 1750);
 }
 
 
 function flashGuesses() {
-    $(".guesses_value").stop().animate({ color: "#aa0000"}, 50).animate({ color: "#ae3e3e"}, 1750);
+    $(".guesses_value").stop().animate({ color: "#aa0000"}, 50).animate({ color: "#ffffff"}, 1750);
 }
 
 function hideLoading() {
@@ -289,13 +289,15 @@ function hideHelpMessage() {
 }
 
 function toggleGameOver() {
-    if($('.gameOver').is(':hidden')) {
+    if($('.gameOverContainer').is(':hidden')) {
+        $('.gameOverContainer').show();
         $('.gameOver').show('bounce', { direction: 'up'}, 1200);
         $('.scoreBox').hide();
         $('.question').addClass('inactive');
         $('.ability').addClass('inactive');
     }
     else {
+        $('.gameOverContainer').hide();
         $('.gameOver').hide();
         $('.scoreBox').show();
         $('.question').removeClass('inactive');
@@ -413,7 +415,7 @@ function nearest(n, v) {
 
                         if(isUsefulProperty(uniqueValues[0])) {
                             randomAbilityProperty = {
-                                name: "MANA COST",
+                                name: "mana cost",
                                 value: randomAbility.manaCost
                             }
 
@@ -426,7 +428,7 @@ function nearest(n, v) {
 
                         if(isUsefulProperty(uniqueValues[0])) {
                             randomAbilityProperty = {
-                                name: "COOLDOWN",
+                                name: "cooldown",
                                 value: randomAbility.cooldown
                             }
 
@@ -439,7 +441,7 @@ function nearest(n, v) {
 
                         if(isUsefulProperty(uniqueValues[0])) {
                             randomAbilityProperty = {
-                                name: "DAMAGE",
+                                name: "damage",
                                 value: randomAbility.damage
                             }
 
@@ -585,8 +587,8 @@ function nearest(n, v) {
             $(".ability .info .description").html(this.problem.question.description.replace( /\\n/g, "<br />" ));
 
             $(".question .property").html(this.problem.property.name);
-            $(".question .heroName").html(this.problem.question.abilityOwner.toUpperCase() + "\'S");
-            $(".question .abilityName").html(this.problem.question.name.toUpperCase());
+            $(".question .heroName").html(this.problem.question.abilityOwner + "\'s");
+            $(".question .abilityName").html(this.problem.question.name);
 
             if(this.problem.level == -1)
                 $(".question .level").hide();
@@ -596,11 +598,13 @@ function nearest(n, v) {
 
         // Update the HTML displaying the player's choices
         Game.updateChoices = function() {
-            $(".choices ul li").each(function(index) {
+            $(".choices .choice").each(function(index) {
+                $(this).blur();
                 $(this).html(Game.problem.choices[index]);
 
                 $(this).unbind("click");
-                $(this).click(function() {
+                $(this).click(function(e) {
+                    e.preventDefault();
                     if(!$(this).hasClass('incorrect')) {
                         Game.selectResponse(Game.problem.choices[index], this)
                     }
@@ -657,7 +661,7 @@ function nearest(n, v) {
         // selectReponse: string => void
         Game.selectResponse = function(userSelection, element) {
             // Wait until choice has stopped animating before being selectable
-            if(!$('.choices ul li').is(':animated')) {
+            if(!$('.choices .choice').is(':animated')) {
                 if (userSelection == this.problem.answer) {
                     // Player chose correctly
                     var pointsEarned = BASE_SCORE_BONUS + Math.round( BASE_SCORE_BONUS * this.streak * STREAK_BONUS );
