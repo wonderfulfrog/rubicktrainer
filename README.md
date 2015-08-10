@@ -12,9 +12,10 @@ Rubick Trainer is a quiz for Dota 2 that tests your knowledge of hero abilities!
 
 ### Setup
 
-1. Run `bundle install` to install the necessary gems.
-2. Run `bundle exec rackup` to start the Rack server.
-3. View the site at [http://localhost:9292](http://localhost:9292).
+1. Install [npm](http://nodejs.org).
+1. Run `npm install`.
+2. Run `npm start` to start a local server.
+3. View the site at [http://localhost:2525](http://localhost:2525).
 
 ### Optional Setup
 
@@ -41,6 +42,7 @@ If you wish to help contribute to the development of Rubick Trainer, here is a q
 A special thanks to all of our contributors!
 
 - [Ray Harris](https://github.com/raymondgh)
+- [lastcenturion](https://github.com/lastcenturion)
 
 ## License
 

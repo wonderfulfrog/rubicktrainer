@@ -235,6 +235,13 @@ a:hover {
     user-select: none;
 }
 
+.versionInfo {
+    text-align: center;
+    padding: 20px 0 0 0;
+    opacity: 0.7;
+    font-size: 0.8em;
+}
+
 @media screen and (max-width: 767px) and (max-device-width: 767px) {
     .navbar {
         margin-bottom: 15px;
