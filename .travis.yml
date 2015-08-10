@@ -1,6 +1,0 @@
-language: ruby
-deploy:
-  provider: heroku
-  app: shielded-coast-1057
-  api_key:
-    secure: PmwGbgbvIx/PcLGDNRtoHU3wrr3S1URqUY82fyv2nlJjyqluGEVgWOuGg3Ns1HjE1BCpHrwO3+sPMxOOLiqvbTYLixH+3q/1/u/aMfscEZUXTIo+sB1CSRps/ygrugqP0+SBY6Iyz2YUb+lFsadzFps9S8C1stsL8YFK+Xj+4vY=

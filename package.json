@@ -1,0 +1,22 @@
+{
+  "name": "rubicktrainer",
+  "version": "1.0.0",
+  "description": "Rubick Trainer is a quiz for Dota 2 that tests your knowledge of hero abilities!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devinwl/rubicktrainer.git"
+  },
+  "author": "Devin Lumley",
+  "license": "GNU General Public License",
+  "bugs": {
+    "url": "https://github.com/devinwl/rubicktrainer/issues"
+  },
+  "homepage": "https://rubicktrainer.wonderfulfailure.com",
+  "devDependencies": {
+    "express": "^4.13.3"
+  }
+}
