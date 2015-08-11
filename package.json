@@ -17,6 +17,7 @@
   },
   "homepage": "https://rubicktrainer.wonderfulfailure.com",
   "dependencies": {
+    "ejs": "^2.3.3",
     "express": "^4.13.3"
   }
 }
