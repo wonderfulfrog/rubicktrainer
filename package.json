@@ -16,7 +16,7 @@
     "url": "https://github.com/devinwl/rubicktrainer/issues"
   },
   "homepage": "https://rubicktrainer.wonderfulfailure.com",
-  "devDependencies": {
+  "dependencies": {
     "express": "^4.13.3"
   }
 }
