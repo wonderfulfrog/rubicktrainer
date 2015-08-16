@@ -199,6 +199,11 @@ a:hover {
     background-color: #1f2223;
 }
 
+.choices .choice.hilight {
+    border: 2px solid #7ed535;
+    opacity: 1.0!important;
+}
+
 .gameOver {
     background: #1f2223;
     text-align: center;
