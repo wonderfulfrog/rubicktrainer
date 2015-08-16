@@ -41,6 +41,7 @@ A special thanks to all of our contributors!
 
 - [Ray Harris](https://github.com/raymondgh)
 - [lastcenturion](https://github.com/lastcenturion)
+- [dodekeract](https://github.com/dodekeract)
 
 ## License
 
