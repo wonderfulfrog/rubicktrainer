@@ -355,6 +355,12 @@ function nearest(n, v) {
     return n;
 }
 
+function trackEvent(eventCategory, eventAction, eventLabel, eventValue) {
+    if(ga) {
+        ga('send', 'event', eventCategory, eventAction, eventLabel, eventValue);
+    }
+}
+
 (function () {
     "use strict";
 
@@ -390,6 +396,8 @@ function nearest(n, v) {
                 Game.newGame();
                 revealGame();
                 toggleGameOver();
+
+                trackEvent('Game', 'Started new game');
             })
         });
 
@@ -653,9 +661,12 @@ function nearest(n, v) {
 
         // Reset streak to 0
         Game.endStreak = function() {
+            var oldStreak = this.streak;
             this.streak = 0;
             flashEndStreak();
             this.updateStreak();
+
+            trackEvent('Game', 'Highest Streak', '', oldStreak);
         }
 
         // selectReponse: string => void
@@ -668,11 +679,15 @@ function nearest(n, v) {
                     this.addToScore(pointsEarned);
                     this.extendStreak();
                     this.nextRound();
+
+                    trackEvent('Game', 'Correct Guess');
                 } else {
                     // Player chose incorrectly
                     $(element).addClass('incorrect');
                     this.removeAttempt();
                     this.endStreak();
+
+                    trackEvent('Game', 'Incorrect Guess');
                 }
             }
         }
