@@ -1,6 +1,6 @@
-rubicktrainer/_site
-rubicktrainer/.sass-cache
-rubicktrainer/.jekyll-metadata
+_site
+.sass-cache
+.jekyll-metadata
 
 # Ignore system files
 Thumbs.db
