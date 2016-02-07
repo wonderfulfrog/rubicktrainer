@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<div class="container">
+    <div class="dotaquiz" style="display: none;">
+
+        <div class="gameOverContainer" style="display: none;">
+            <div class="gameOver" style="display: none;">
+                <span class="gameOverText">Game over</span>
+                Final Score: <span class="finalScoreValue"></span> points<br />
+                Highest Streak: <span class="highestStreakValue"></span> in a row
+                <div class="newGame">New Game</div>
+                <p>Anything wrong?  <a href="https://github.com/devinwl/rubicktrainer/issues">Report a bug</a>!</p>
+            </div>
+        </div>
+
+        <div class="scoreBox">
+            <span class="score_value">0</span> points &bull;
+            <span class="guesses_value">7</span> guesses left &bull;
+            <span class="streak_value">0</span> in a row
+        </div>
+
+        <div class="question">
+            <span id="question_text_1">What's the</span> <span class="property"></span> <span id="question_text_2">of</span> <span class="heroName"></span> <span class="level"><span id="level">level</span> <span class="levelVal">x</span></span> <span class="abilityName"></span>?
+        </div>
+
+        <div class="ability">
+            <div class="abilityBox">
+                <div class="icon"></div>
+                <div class="info">
+                    <div class="name"></div>
+                    <div class="description"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="choices">
+                <div class="col-xs-3 col-sm-3">
+                    <a href="#" class="choice">1</a>
+                </div>
+                <div class="col-xs-3 col-sm-3">
+                    <a href="#" class="choice">2</a>
+                </div>
+                <div class="col-xs-3 col-sm-3">
+                    <a href="#" class="choice">3</a>
+                </div>
+                <div class="col-xs-3 col-sm-3">
+                    <a href="#" class="choice">4</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

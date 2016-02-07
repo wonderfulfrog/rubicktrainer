@@ -10,10 +10,10 @@ Rubick Trainer is a quiz for Dota 2 that tests your knowledge of hero abilities!
 
 ### Setup
 
-1. Install [npm](http://nodejs.org).
-1. Run `npm install`.
-2. Run `npm start` to start a local server.
-3. View the site at [http://localhost:2525](http://localhost:2525).
+1. `bundle install`
+2. `cd rubicktrainer`
+3. `jekyll serve`
+4. View the site at [http://localhost:4000](http://localhost:4000).
 
 ### Optional Setup
 

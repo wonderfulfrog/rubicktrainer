@@ -1,11 +1,7 @@
-# Ignore Dota 2 assets
-images/dota2/*/*.png
-images/dota2/*/*.jpg
-images/dota2/*/*.jpeg
-images/dota2/*/*.gif
+rubicktrainer/_site
+rubicktrainer/.sass-cache
+rubicktrainer/.jekyll-metadata
 
 # Ignore system files
 Thumbs.db
 .DS_Store
-
-node_modules/
