@@ -1,0 +1,291 @@
+body {
+    background-color: #252627;
+    color: #9b9b9b;
+}
+
+/*
+body:after {
+    background-image: url();
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.2;
+    background-size: cover;
+    background-position: center;
+}
+*/
+
+a,
+a:hover {
+    color: #7ed535;
+}
+
+.navbar {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.navbar .navbar-brand {
+    font-family: 'Oswald';
+    font-size: 1.8em;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.navbar .navbar-brand .green {
+    color: #7ed535;
+}
+
+.loading {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.help_screen {
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.help_screen .box {
+    width: 300px;
+    min-height: 140px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 15%;
+    background: #252627;
+    border: 2px solid #1f2223;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.help_screen .confirm {
+    width: 120px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: #1f2223;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 0.9em;
+    border: 1px solid #9b9b9b;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.scoreBox {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.score_value, .guesses_value, .streak_value {
+    color: #ffffff;
+}
+
+.question {
+    background: #1f2223;
+    padding: 10px;
+    font-size: 1.2em;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.property {
+    color: #1a87f9;
+}
+
+.heroName {
+    color: #ae3e3e;
+}
+
+.abilityName {
+    color: #7ed535;
+}
+
+.level {
+    color: #fff;
+}
+
+.property,
+.heroName,
+.abilityName,
+.level {
+    font-weight: 700;
+}
+
+.ability {
+    background: #1f2223;
+    position: relative;
+    padding: 20px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.abilityBox {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.ability .icon {
+    float: left;
+}
+
+.ability .icon img {
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+}
+
+.ability .info {
+    margin-left: 148px;
+}
+
+.ability .info .name {
+    color: #7ed535;
+    padding-bottom: 10px;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.ability .info .description {
+    font-size: 1.2em;
+    line-height: 1.2;
+}
+
+.choices {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.choices .choice {
+    display: block;
+    text-align: center;
+    height: 64px;
+    background: #1f2223;
+    color: #ffffff;
+    border-bottom: 2px solid #7ed535;
+    line-height: 64px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 1.6em;
+}
+
+.choices .choice:hover,
+.choices .choice:focus {
+    text-decoration: none;
+}
+
+.choices .choice:hover {
+    background-color: #272a2b;
+}
+
+.choices .choice.incorrect {
+    opacity: 0.4;
+}
+
+.choices .choice.incorrect:hover {
+    background-color: #1f2223;
+}
+
+.choices .choice.hilight {
+    border: 2px solid #7ed535;
+    opacity: 1.0!important;
+}
+
+.gameOver {
+    background: #1f2223;
+    text-align: center;
+    font-size: 1.0em;
+    overflow: hidden;
+}
+
+.gameOver .gameOverText {
+    font-size: 1.4em;
+    color: #7ed535;
+    margin-top: 10px;
+    display: block;
+}
+
+.gameOver .highestStreakValue, .gameOver .finalScoreValue {
+    color: #ffffff;
+}
+
+.gameOver .newGame {
+    width: 95px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #1f2223;
+    border-radius: 5px;
+    padding: 5px;
+    line-height: 25px;
+    font-size: 1em;
+    border: 1px solid #9b9b9b;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.versionInfo {
+    text-align: center;
+    padding: 20px 0 0 0;
+    opacity: 0.7;
+    font-size: 0.8em;
+}
+
+@media screen and (max-width: 767px) and (max-device-width: 767px) {
+    .navbar {
+        margin-bottom: 15px;
+    }
+
+    .question,
+    .ability,
+    .choices {
+        margin-top: 15px;
+    }
+
+    .ability .icon img {
+        max-width: 96px;
+    }
+
+    .ability .info {
+        margin-left: 116px;
+    }
+}
+
+@media screen and (max-width: 460px) and (max-device-width: 460px) {
+    body {
+        font-size: 12px;
+    }
+
+    .ability {
+        padding: 10px;
+    }
+
+    .ability .info .name {
+        padding-bottom: 0;
+        font-size: 1.3em;
+    }
+
+    .ability .icon img {
+        max-width: 48px;
+    }
+
+    .ability .info {
+        margin-left: 68px;
+    }
+}
